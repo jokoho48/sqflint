@@ -5,8 +5,10 @@ RUN apk update && \
     apk add --update git
 
     
-# Clone a repository (my website in this case)
+# Clone a repository
 RUN git clone https://github.com/jokoho48/sqf.git
+
+RUN python3 setup.py
 
 COPY entrypoint.sh /entrypoint.sh
 
