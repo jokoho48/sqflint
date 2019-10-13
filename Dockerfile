@@ -8,7 +8,7 @@ RUN apk update && \
 # Clone a repository
 RUN git clone https://github.com/jokoho48/sqf.git
 
-RUN python3 setup.py
+RUN python3 sqf/setup.py
 
 COPY entrypoint.sh /entrypoint.sh
 
