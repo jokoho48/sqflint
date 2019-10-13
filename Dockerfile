@@ -1,6 +1,12 @@
 FROM python:3.7-alpine
 
-RUN pip3 install sqflint
+# Install dependencies required to git clone.
+RUN apk update && \
+    apk add --update git
+
+    
+# Clone a repository (my website in this case)
+RUN git clone https://github.com/jokoho48/sqf.git
 
 COPY entrypoint.sh /entrypoint.sh
 
