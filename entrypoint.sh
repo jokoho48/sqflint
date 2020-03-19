@@ -2,4 +2,4 @@
 
 sh -c "echo Running sqflint with arguments:"
 sh -c "echo $*"
-sh -c "sqflint  $*"
+sh -c "python3 sqfLint/sqflint.py  $*"
