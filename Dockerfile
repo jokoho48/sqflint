@@ -4,7 +4,7 @@ FROM python:3.7-alpine
 RUN apk update && \
     apk add --update git
 
-RUN pip3 install https://github.com/jokoho48/sqf/archive/master.zip
+RUN git clone https://github.com/jokoho48/sqf.git sqfLint
 
 COPY entrypoint.sh /entrypoint.sh
 
